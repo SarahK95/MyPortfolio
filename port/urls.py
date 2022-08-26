@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
-    url(r'^project/(\d+)', views.get_project, name='get_project'),
+    url(r'^project/(\d+)', views.get_projects, name='get_project'),
 ]
 
 if settings.DEBUG:
