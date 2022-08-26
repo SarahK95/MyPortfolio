@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -8,6 +9,7 @@ class Projects(models.Model):
     description =models.TextField()
     link = models.URLField()
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
+    image = models.ImageField(upload_to = 'images/', blank=True)
     
     def save_project(self):
         self.save
