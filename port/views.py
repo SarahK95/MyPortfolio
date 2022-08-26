@@ -2,6 +2,7 @@ from django.http import Http404
 from django.shortcuts import render
 from models import *
 from django.core.exceptions import ObjectDoesNotExist
+from django.http import HttpResponse, Http404
 
 # Create your views here.
 
@@ -16,4 +17,4 @@ def get_projects(request, id):
     except ObjectDoesNotExist:
         raise Http404()
     
-    return render (request, 'projects.html', {'project':project})
+    return render (request, 'project.html', {'project':project})
