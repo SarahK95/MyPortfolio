@@ -1,21 +1,75 @@
 {% extends 'base.html' %}
 {%block content%}
-<div style="background:url('https://cdn.pixabay.com/photo/2019/12/13/09/46/umbrella-4692572_960_720.jpg'); height: 70vh; background-size: cover; background-position: center;">
-    <div class="container">
-        <div class="row mx-lg-n5">
-          <div class="col py-3 px-lg-5  bg-white">
-            <h4>Welcome to my world</h4>
-            <h2>Hi there, I'm Sarah Kamunya a passionate Software Developer, based in Nairobi,Kenya!</h2>
-            
-          </div>
-            
-          </div>
-          <div class="col py-3 px-lg-5 ">
-            <img class="image-fluid" src="{% static 'images/girl.png'%}" style="width:100%; padding-top:30px; padding-left:none;" >
-          </div>
+{%load static%}
+<div style="background:url('https://c1.wallpaperflare.com/preview/811/367/789/technology-computer-creative-design.jpg'); height: 70vh; background-size: cover; background-position: center;">
+  
+      <div class="container">
+            <div class="row mx-lg-n5">
+            <div class="col py-3 px-lg-5  ">
+                <h4><b>Welcome to my world!</b></h4>
+
+                <p>Hi there, I'm Sarah Kamunya a passionate Software Developer,<br>
+                     <span id= "place">based in Nairobi,Kenya!</span></p>
+
+                
+            </div>
+            <div class="col py-3 px-lg-5">
+                
+            </div>
+            </div>
         </div>
-      </div> 
 
+        <div class="container-fluid">
+            
+            <div class="row mx-lg-n5">
+             
+              <div class="col py-3 px-lg-5  bg-dark" >
+                <h3 class="about ms-auto">About me</h3>
+                
+                <p class="words" style="padding-top:40px;">Lorem Ipsum is 
+                  simply dummy text of the printing and typesetting industry.
+                   Lorem Ipsum has been the industry's standard dummy text ever since t
+                   he 1500s, when an unknown printer took a galley of type and scrambled
+                    it to make a type specimen book. It has survived not only five centuries,
+                     but also the leap into electronic t
+                  ypesetting, remaining essentially unchanged. </p>
+
+              </div>
+              <div class="col py-3 px-lg-5  bg-dark">
+                <img class="image-fluid" src="{% static 'images/me.jpg'%}" style="width:60%; padding-top:60px; padding-left:none;" >
+              </div>
+            </div>
+    
 </div>
+<style>
+   
+    h4{
+        font-size:30px;
+        margin-top:100px;
+        font-weight:bold;
+        color:#fff;
+    }
+ 
+    p{
+        font-weight:bold;
+        color:#fff;
+        font-size: 20px;
+        line-height: 1.7;
+    } 
 
+    #place{
+       line-height:4.6;
+       font-size: 17px;
+
+    }
+    h3{
+        color:#fff;
+        font-weight:bold;
+        font-size:40px;
+    }
+
+
+
+  
+  </style>
 {% endblock %}
