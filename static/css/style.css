@@ -8,5 +8,9 @@ body{
     font-size: 15px;
 }
 
+nav a:hover{
+    background-color: #c93112;
+}
+
 
 

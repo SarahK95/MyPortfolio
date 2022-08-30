@@ -3,9 +3,9 @@
 {%load static%}
 <div style="background:url('https://c1.wallpaperflare.com/preview/811/367/789/technology-computer-creative-design.jpg'); height: 70vh; background-size: cover; background-position: center;">
   
-      <div class="container">
+      <div class="container1">
             <div class="row mx-lg-n5">
-            <div class="col py-3 px-lg-5  ">
+            <div class="col py-3 px-lg-5 " style="margin-left:40px;">
                 <h4><b>Welcome to my world!</b></h4>
 
                 <p>Hi there, I'm Sarah Kamunya a passionate Software Developer,<br>
@@ -40,7 +40,7 @@
               </div>
             </div>-->
           </div>
-            <div class="container" style="margin-top:70px;">
+            <div class="container"  id ="A1" style="margin-top:70px;">
               <div class="row">
                 <div class="col">
                   <img class="image-fluid" src="{% static 'images/mee.jpg'%}" style="width:90%;">
@@ -61,6 +61,51 @@
                 
               </div>
             </div>
+
+            <div class="container-fluid" >
+              <div class="mb-2 pb-2 pl-4 pr-2 ml-4 mr-1">
+                  <h1 class="display-6 font-weight-bold" id="P1" style="font-size:40px; font-size: 70px; margin-top: 30px; text-align:center; font-weight:bold" > My Projects </h1>
+              </div> 
+
+              <div class= "row pl-2 pr-2 ml-1 mr-1">
+                {%for project in projects%}
+                <div class="col-lg-4">
+                  <div class="card-deck">
+                    <div class="card mb-2 mt-2">
+                      <!-- Card image -->
+                    <div class="view overlay zoom">
+                      {% if project.image %}
+                      <a href="/project/{{items.id}}">
+                        <img class="card-img-top" src="{{project.image.url}}" alt="{{ project.title }}" height="370px" width="90%">
+                    </a>
+                    {% else %}
+                    <a href="/project/{{project.id}}">
+                    <img  class="card-img-top" src="" alt="{{ project.title }}">
+                    </a>
+                    {% endif %}
+                    <a href="/project/{{project.id}}">
+                        <div class="mask rgba-black-dark">
+                </div>
+            </a>
+                    </div>
+                    <div class="card-body pr-2 pl-2 pr-2 mr-2 ">
+                      <h2 class="" style="margin-left:10px;">{{ project.title }}</h2>
+                      <h5 class=""style="margin-left:10px;">{{ project.description }}</h5>
+                        <!-- Social shares -->
+          <div>
+            <a href="{{project.link}}" target="_blank" title="Visit site">
+              <button type="button" class="btn">Visit website</button></a>
+          </div>           
+              </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              
+              {% endfor %}
 
 
     
@@ -113,7 +158,28 @@
       background-color:#c93112;
       color:#fff;
   }
+
+  .btn{
+    font-weight:bold;
+    font-size:15px;
+    color: #fff;
+      border: #c93112 2px solid;
+      border-radius: 10px;
+      background:transparent;
+      margin :0.5rem 1.5rem;
   
+  }
+  .btn:hover{
+    background-color:#c93112;
+    color:#fff;
+}
+
+.card{
+  background-color:#000;
+  color:#fff;
+
+}
+
 
 
 
